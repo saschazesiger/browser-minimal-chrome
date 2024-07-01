@@ -4,5 +4,5 @@
 
 
 ## Run Container
-`docker run chromevnc -p 5900:5900`
+`docker run -p 5900:5900 chromevnc`
 
