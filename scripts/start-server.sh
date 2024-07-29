@@ -7,5 +7,5 @@ vncserver -geometry 1024x768 -depth 16 :99 -rfbport 5900 -noxstartup -securityty
 screen -d -m env HOME=/etc /usr/bin/fluxbox
 
 while true; do
-  trickle -d ${BANDWIDTH} -u ${BANDWIDTH} /usr/bin/microsoft-edge ${URL} -no-sandbox --disable-accelerated-video --bwsi --new-window --test-type --disable-accelerated-video --disable-gpu --dbus-stub --no-default-browser-check --no-first-run --bwsi --user-data-dir=/browser --disable-features=Titlebar --disable-dev-shm-usage --lang=${LANGUAGE}>/dev/null
+  trickle -d ${BANDWIDTH} -u ${BANDWIDTH} /usr/bin/google-chrome ${URL} -no-sandbox --disable-accelerated-video --bwsi --new-window --test-type --disable-accelerated-video --disable-gpu --dbus-stub --no-default-browser-check --no-first-run --bwsi --user-data-dir=/browser --disable-features=Titlebar --disable-dev-shm-usage --lang=${LANGUAGE}>/dev/null
 done

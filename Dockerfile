@@ -40,10 +40,9 @@ RUN adduser root pulse-access
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1001 ubuntu
 
 # ------------ Install Browser ------------
-# New Version: https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_126.0.2592.81-1_amd64.deb?brand=M102
-RUN wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_114.0.1823.82-1_amd64.deb?brand=M102 -O /tmp/edge.deb
-RUN dpkg -i /tmp/edge.deb || apt-get install -yf
-RUN rm /tmp/edge.deb
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb
+RUN dpkg -i /tmp/chrome.deb || apt-get install -yf
+RUN rm /tmp/chrome.deb
 # ------------ End Install Browser ------------
 
 #Server Start
